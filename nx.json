@@ -18,5 +18,47 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "control-tower": {
+      "tags": []
+    },
+    "control-tower-e2e": {
+      "tags": [],
+      "implicitDependencies": ["control-tower"]
+    },
+    "control-tower-feature-home": {
+      "tags": []
+    },
+    "control-tower-feature-charts": {
+      "tags": []
+    },
+    "control-tower-domain": {
+      "tags": []
+    },
+    "cors": {
+      "tags": []
+    },
+    "cors-e2e": {
+      "tags": [],
+      "implicitDependencies": ["cors"]
+    },
+    "cors-feature-home": {
+      "tags": []
+    },
+    "cors-feature-workflow-returns": {
+      "tags": []
+    },
+    "cors-domain": {
+      "tags": []
+    },
+    "shared-ui-buttons": {
+      "tags": []
+    },
+    "shared-ui-cards": {
+      "tags": []
+    },
+    "shared-util-text": {
+      "tags": []
+    }
+  }
 }

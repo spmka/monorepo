@@ -15,7 +15,23 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@spmka/control-tower/feature-home": [
+        "libs/control-tower/feature-home/src/index.ts"
+      ],
+      "@spmka/control-tower/feature-charts": [
+        "libs/control-tower/feature-charts/src/index.ts"
+      ],
+      "@spmka/control-tower/domain": ["libs/control-tower/domain/src/index.ts"],
+      "@spmka/cors/feature-home": ["libs/cors/feature-home/src/index.ts"],
+      "@spmka/cors/feature-workflow-returns": [
+        "libs/cors/feature-workflow-returns/src/index.ts"
+      ],
+      "@spmka/cors/domain": ["libs/cors/domain/src/index.ts"],
+      "@spmka/shared/ui-buttons": ["libs/shared/ui-buttons/src/index.ts"],
+      "@spmka/shared/ui-cards": ["libs/shared/ui-cards/src/index.ts"],
+      "@spmka/shared/util-text": ["libs/shared/util-text/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
