@@ -1,4 +1,4 @@
-describe('cors', () => {
+describe('Control-Tower', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display title Control-Tower', () => {
