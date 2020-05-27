@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkflowReturnsComponent } from './workflow-returns.component';
+import { CorsFeatureHomeModule } from '@spmka/cors/feature-home';
 
 describe('WorkflowReturnsComponent', () => {
   let component: WorkflowReturnsComponent;
@@ -8,9 +9,10 @@ describe('WorkflowReturnsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkflowReturnsComponent ]
+      imports: [CorsFeatureHomeModule],
+      declarations: [WorkflowReturnsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
