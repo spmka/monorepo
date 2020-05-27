@@ -1,2 +1,4 @@
 <h1>{{title}}</h1>
-<spmka-about-card [aboutText]="about"></spmka-about-card>
+<spmka-home></spmka-home>
+<spmka-about-card *ngIf="showAbout" [aboutText]="about"></spmka-about-card>
+<spmka-about-button (clicked)="onToggleAbout()"></spmka-about-button>

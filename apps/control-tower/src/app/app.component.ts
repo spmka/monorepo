@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public title = 'Control-Tower';
   public about = 'Control-Tower Aplication'
+  public showAbout = false;
+
+  public onToggleAbout() {
+    this.showAbout = ! this.showAbout;
+  }
 }

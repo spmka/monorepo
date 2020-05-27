@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
+import { ControlTowerFeatureHomeModule } from '@spmka/control-tower/feature-home';
 import { SharedUiCardsModule } from '@spmka/shared/ui-cards'
 
 @NgModule({
@@ -11,7 +12,8 @@ import { SharedUiCardsModule } from '@spmka/shared/ui-cards'
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    SharedUiCardsModule
+    SharedUiCardsModule,
+    ControlTowerFeatureHomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

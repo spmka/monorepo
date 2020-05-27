@@ -20,45 +20,45 @@
   },
   "projects": {
     "control-tower": {
-      "tags": []
+      "tags": ["scope:control-tower", "type:app"]
     },
     "control-tower-e2e": {
       "tags": [],
       "implicitDependencies": ["control-tower"]
     },
     "control-tower-feature-home": {
-      "tags": []
+      "tags": ["scope:control-tower", "type:feature"]
     },
     "control-tower-feature-charts": {
-      "tags": []
+      "tags": ["scope:control-tower", "type:feature"]
     },
     "control-tower-domain": {
-      "tags": []
+      "tags": ["scope:control-tower", "type:domain"]
     },
     "cors": {
-      "tags": []
+      "tags": ["scope:cors", "type:app"]
     },
     "cors-e2e": {
       "tags": [],
       "implicitDependencies": ["cors"]
     },
     "cors-feature-home": {
-      "tags": []
+      "tags": ["scope:app", "type:feature"]
     },
     "cors-feature-workflow-returns": {
-      "tags": []
+      "tags": ["scope:app", "type:feature"]
     },
     "cors-domain": {
-      "tags": []
+      "tags": ["scope:app", "type:domain"]
     },
     "shared-ui-buttons": {
-      "tags": []
+      "tags": ["scope:shared", "type:ui"]
     },
     "shared-ui-cards": {
-      "tags": []
+      "tags": ["scope:shared", "type:ui"]
     },
     "shared-util-text": {
-      "tags": []
+      "tags": ["scope:shared", "type:util"]
     }
   }
 }
