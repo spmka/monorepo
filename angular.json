@@ -25,7 +25,11 @@
               "apps/control-tower/src/favicon.ico",
               "apps/control-tower/src/assets"
             ],
-            "styles": ["apps/control-tower/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/control-tower/src/styles.scss",
+              "libs/shared/styles/shared-styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -84,7 +88,10 @@
               "apps/control-tower/tsconfig.app.json",
               "apps/control-tower/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/control-tower/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/control-tower/**"
+            ]
           }
         },
         "test": {
@@ -119,8 +126,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/control-tower-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/control-tower-e2e/**"]
+            "tsConfig": [
+              "apps/control-tower-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/control-tower-e2e/**"
+            ]
           }
         }
       }
@@ -208,7 +220,10 @@
               "libs/control-tower/domain/tsconfig.lib.json",
               "libs/control-tower/domain/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/control-tower/domain/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/control-tower/domain/**"
+            ]
           }
         },
         "test": {
@@ -247,8 +262,15 @@
             "polyfills": "apps/cors/src/polyfills.ts",
             "tsConfig": "apps/cors/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/cors/src/favicon.ico", "apps/cors/src/assets"],
-            "styles": ["apps/cors/src/styles.scss"],
+            "assets": [
+              "apps/cors/src/favicon.ico",
+              "apps/cors/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/cors/src/styles.scss",
+              "libs/shared/styles/shared-styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -307,7 +329,10 @@
               "apps/cors/tsconfig.app.json",
               "apps/cors/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/cors/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/cors/**"
+            ]
           }
         },
         "test": {
@@ -342,8 +367,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/cors-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/cors-e2e/**"]
+            "tsConfig": [
+              "apps/cors-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/cors-e2e/**"
+            ]
           }
         }
       }
@@ -361,7 +391,10 @@
               "libs/cors/feature-home/tsconfig.lib.json",
               "libs/cors/feature-home/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/cors/feature-home/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cors/feature-home/**"
+            ]
           }
         },
         "test": {
@@ -428,7 +461,10 @@
               "libs/cors/domain/tsconfig.lib.json",
               "libs/cors/domain/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/cors/domain/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cors/domain/**"
+            ]
           }
         },
         "test": {
@@ -460,7 +496,10 @@
               "libs/shared/ui-buttons/tsconfig.lib.json",
               "libs/shared/ui-buttons/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui-buttons/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui-buttons/**"
+            ]
           }
         },
         "test": {
@@ -492,7 +531,10 @@
               "libs/shared/ui-cards/tsconfig.lib.json",
               "libs/shared/ui-cards/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui-cards/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui-cards/**"
+            ]
           }
         },
         "test": {
@@ -524,7 +566,10 @@
               "libs/shared/util-text/tsconfig.lib.json",
               "libs/shared/util-text/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/util-text/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/util-text/**"
+            ]
           }
         },
         "test": {
