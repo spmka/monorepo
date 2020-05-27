@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TextTools } from '@spmka/shared/util-text';
 
 @Component({
   selector: 'spmka-about-card',
@@ -7,4 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AboutCardComponent {
   @Input() public aboutText: string;
+  public copyRight: string;
+
+  public constructor() {
+    this.copyRight = TextTools.uppercase('© T-Systems Karlsruhe');
+  }
 }
