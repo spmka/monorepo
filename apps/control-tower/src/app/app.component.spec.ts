@@ -3,11 +3,12 @@ import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedUiCardsModule } from '@spmka/shared/ui-cards';
 import { SharedUiButtonsModule } from '@spmka/shared/ui-buttons';
+import { ControlTowerFeatureHomeModule } from '@spmka/control-tower/feature-home';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, SharedUiCardsModule, SharedUiButtonsModule],
+      imports: [RouterTestingModule, SharedUiCardsModule, SharedUiButtonsModule, ControlTowerFeatureHomeModule],
       declarations: [AppComponent],
     }).compileComponents();
   }));

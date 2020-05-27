@@ -2,11 +2,12 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SharedUiCardsModule } from '@spmka/shared/ui-cards';
+import { ControlTowerFeatureHomeModule } from '@spmka/control-tower/feature-home';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, SharedUiCardsModule],
+      imports: [RouterTestingModule, SharedUiCardsModule, ControlTowerFeatureHomeModule],
       declarations: [AppComponent],
     }).compileComponents();
   }));
