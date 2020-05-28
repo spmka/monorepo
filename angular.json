@@ -88,10 +88,7 @@
               "apps/control-tower/tsconfig.app.json",
               "apps/control-tower/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/control-tower/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/control-tower/**"]
           }
         },
         "test": {
@@ -126,13 +123,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/control-tower-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/control-tower-e2e/**"
-            ]
+            "tsConfig": ["apps/control-tower-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/control-tower-e2e/**"]
           }
         }
       }
@@ -220,10 +212,7 @@
               "libs/control-tower/domain/tsconfig.lib.json",
               "libs/control-tower/domain/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/control-tower/domain/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/control-tower/domain/**"]
           }
         },
         "test": {
@@ -262,10 +251,7 @@
             "polyfills": "apps/cors/src/polyfills.ts",
             "tsConfig": "apps/cors/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/cors/src/favicon.ico",
-              "apps/cors/src/assets"
-            ],
+            "assets": ["apps/cors/src/favicon.ico", "apps/cors/src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "apps/cors/src/styles.scss",
@@ -329,10 +315,7 @@
               "apps/cors/tsconfig.app.json",
               "apps/cors/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/cors/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/cors/**"]
           }
         },
         "test": {
@@ -367,13 +350,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/cors-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/cors-e2e/**"
-            ]
+            "tsConfig": ["apps/cors-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/cors-e2e/**"]
           }
         }
       }
@@ -391,10 +369,7 @@
               "libs/cors/feature-home/tsconfig.lib.json",
               "libs/cors/feature-home/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/cors/feature-home/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/cors/feature-home/**"]
           }
         },
         "test": {
@@ -461,10 +436,7 @@
               "libs/cors/domain/tsconfig.lib.json",
               "libs/cors/domain/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/cors/domain/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/cors/domain/**"]
           }
         },
         "test": {
@@ -496,10 +468,7 @@
               "libs/shared/ui-buttons/tsconfig.lib.json",
               "libs/shared/ui-buttons/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/ui-buttons/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-buttons/**"]
           }
         },
         "test": {
@@ -531,10 +500,7 @@
               "libs/shared/ui-cards/tsconfig.lib.json",
               "libs/shared/ui-cards/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/ui-cards/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-cards/**"]
           }
         },
         "test": {
@@ -566,10 +532,7 @@
               "libs/shared/util-text/tsconfig.lib.json",
               "libs/shared/util-text/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/util-text/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/util-text/**"]
           }
         },
         "test": {
@@ -585,6 +548,130 @@
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
+        }
+      }
+    },
+    "template": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/template",
+      "sourceRoot": "apps/template/src",
+      "prefix": "spmka",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/template",
+            "index": "apps/template/src/index.html",
+            "main": "apps/template/src/main.ts",
+            "polyfills": "apps/template/src/polyfills.ts",
+            "tsConfig": "apps/template/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/template/src/favicon.ico",
+              "apps/template/src/assets"
+            ],
+            "styles": ["apps/template/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/template/src/environments/environment.ts",
+                  "with": "apps/template/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "template:build",
+            "port": 4000
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "template:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "template:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/template/tsconfig.app.json",
+              "apps/template/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/template/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/template/jest.config.js",
+            "tsConfig": "apps/template/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/template/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "template-e2e": {
+      "root": "apps/template-e2e",
+      "sourceRoot": "apps/template-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/template-e2e/cypress.json",
+            "tsConfig": "apps/template-e2e/tsconfig.e2e.json",
+            "devServerTarget": "template:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "template:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/template-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/template-e2e/**"]
+          }
         }
       }
     }

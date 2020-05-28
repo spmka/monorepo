@@ -43,13 +43,13 @@
       "implicitDependencies": ["cors"]
     },
     "cors-feature-home": {
-      "tags": ["scope:app", "type:feature"]
+      "tags": ["scope:cors", "type:feature"]
     },
     "cors-feature-workflow-returns": {
-      "tags": ["scope:app", "type:feature"]
+      "tags": ["scope:cors", "type:feature"]
     },
     "cors-domain": {
-      "tags": ["scope:app", "type:domain"]
+      "tags": ["scope:cors", "type:domain"]
     },
     "shared-ui-buttons": {
       "tags": ["scope:shared", "type:ui"]
@@ -59,6 +59,13 @@
     },
     "shared-util-text": {
       "tags": ["scope:shared", "type:util"]
+    },
+    "template": {
+      "tags": ["scope:template", "type:app"]
+    },
+    "template-e2e": {
+      "tags": [],
+      "implicitDependencies": ["template"]
     }
   }
 }
