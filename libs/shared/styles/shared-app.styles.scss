@@ -1,0 +1,15 @@
+@import 'shared-font.styles.scss';
+@import 'shared-theme.styles.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+  font-family: 'Corporate S Global', Arial, sans-serif !important;
+  @include light-theme();
+}

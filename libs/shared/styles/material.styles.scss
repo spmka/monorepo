@@ -1,0 +1,87 @@
+@import "theme.styles";
+
+$font-size: $louis-font-size;
+$height-items-gap: 10px;
+
+// Each mat-card should have a bottom margin
+mat-card {
+  margin-bottom: 10px;
+  @extend .normal-element;
+
+  mat-card-subtitle {
+    @extend .normal-element;
+  }
+}
+
+// We shift the header of a mat-card to the left (normally there are 16px margin
+// This style is for all mat-cards in the app
+.mat-card-header-text {
+  height: auto !important;
+  margin: 0 !important;
+}
+
+// We give the card content a bit of room under the header
+mat-card-content {
+  margin-top: 10px;
+}
+
+.mat-card-primary {
+  @extend .light-primary;
+
+  mat-card-subtitle {
+    @extend .light-primary;
+  }
+}
+
+.mat-card-accent {
+  @extend .light-accent;
+
+  mat-card-subtitle {
+    @extend .light-accent;
+  }
+}
+
+.mat-card-warn {
+  @extend .light-warn;
+
+  mat-card-subtitle {
+    @extend .light-warn;
+  }
+}
+
+mat-expansion-panel-header {
+  @extend .light-primary;
+}
+
+mat-expansion-panel-header:hover {
+  @extend .extra-light-primary;
+}
+
+.mat-expansion-panel-header-description {
+  flex-grow: 2;
+  flex-direction: row-reverse;
+}
+
+mat-panel-title, mat-panel-description {
+  font-weight: bold;
+  font-size: $font-size;
+}
+
+.mat-expansion-panel-body {
+  padding: 10px !important;
+}
+
+button, label, p, mat-radio-button, mat-slide-toggle, .mat-option-text {
+  font-size: $font-size !important;
+}
+
+mat-bottom-sheet-container {
+  // background-color: var(--louis-dark-home-background-color) !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+// margin between stepper and content
+.mat-horizontal-content-container {
+  margin-top: $height-items-gap;
+}

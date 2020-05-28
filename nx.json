@@ -66,6 +66,9 @@
     "template-e2e": {
       "tags": [],
       "implicitDependencies": ["template"]
+    },
+    "template-feature-form": {
+      "tags": ["scope:template", "type:feature"]
     }
   }
 }

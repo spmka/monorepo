@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Corporate S Global';
+  src: url('libs/shared/assets/fonts/CorporateS-Global.woff2') format('woff2');
+  font-weight: normal;
+}
+
+.font-corporate-s-global * {
+  font-family: 'Corporate S Global', Arial, sans-serif !important;
+
+  mat-icon {
+    font-family: 'Material Icons', sans-serif !important;
+  }
+}
+
+.font-double-height {
+  font-size: 2em;
+}

@@ -30,7 +30,11 @@
       "@spmka/cors/domain": ["libs/cors/domain/src/index.ts"],
       "@spmka/shared/ui-buttons": ["libs/shared/ui-buttons/src/index.ts"],
       "@spmka/shared/ui-cards": ["libs/shared/ui-cards/src/index.ts"],
-      "@spmka/shared/util-text": ["libs/shared/util-text/src/index.ts"]
+      "@spmka/shared/util-text": ["libs/shared/util-text/src/index.ts"],
+      "@spmka/template/feature-form": [
+        "libs/template/feature-form/src/index.ts"
+      ],
+      "@spmka/shared/util-assets": ["libs/shared/util-assets/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

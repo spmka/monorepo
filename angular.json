@@ -26,9 +26,7 @@
               "apps/control-tower/src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "apps/control-tower/src/styles.scss",
-              "libs/shared/styles/shared-styles.scss"
+              "apps/control-tower/src/styles.scss"
             ],
             "scripts": []
           },
@@ -251,11 +249,12 @@
             "polyfills": "apps/cors/src/polyfills.ts",
             "tsConfig": "apps/cors/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/cors/src/favicon.ico", "apps/cors/src/assets"],
+            "assets": [
+              "apps/cors/src/favicon.ico",
+              "apps/cors/src/assets"
+            ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "apps/cors/src/styles.scss",
-              "libs/shared/styles/shared-styles.scss"
+              "apps/cors/src/styles.scss"
             ],
             "scripts": []
           },
@@ -672,6 +671,38 @@
             "tsConfig": ["apps/template-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/template-e2e/**"]
           }
+        }
+      }
+    },
+    "template-feature-form": {
+      "projectType": "library",
+      "root": "libs/template/feature-form",
+      "sourceRoot": "libs/template/feature-form/src",
+      "prefix": "spmka",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/template/feature-form/tsconfig.lib.json",
+              "libs/template/feature-form/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/template/feature-form/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/template/feature-form/jest.config.js",
+            "tsConfig": "libs/template/feature-form/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/template/feature-form/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }

@@ -1,0 +1,331 @@
+@import '../../../node_modules/@angular/material/theming';
+@import 'shared-theme-daimler.styles';
+
+// http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5
+
+@include mat-core();
+
+// font size
+$spmka-font-size: 14px;
+
+$daimler-grey: (
+  cool: #e6e6e6,
+  d: #444444,
+  n: #707070,
+  l: #9e9e9e,
+  el: #c8c8c8
+);
+
+@function create-color-maps($spmka-theme, $hues) {
+  $spmka-primary: map-get($spmka-theme, primary);
+  $spmka-accent: map-get($spmka-theme, accent);
+  $spmka-warn: map-get($spmka-theme, warn);
+  @return (
+    primary: (
+    db: mat-color($spmka-primary, map-get(map-get($hues, primary), d)), dt: mat-contrast($spmka-primary, map-get(map-get($hues, primary), d)),
+    nb: mat-color($spmka-primary, map-get(map-get($hues, primary), n)), nt: mat-contrast($spmka-primary, map-get(map-get($hues, primary), n)),
+    lb: mat-color($spmka-primary, map-get(map-get($hues, primary), l)), lt: mat-contrast($spmka-primary, map-get(map-get($hues, primary), l)),
+    elb: mat-color($spmka-primary, map-get(map-get($hues, primary), el)), elt: mat-contrast($spmka-primary, map-get(map-get($hues, primary), el))),
+  accent: (
+    db: mat-color($spmka-accent, map-get(map-get($hues, accent), d)), dt: mat-contrast($spmka-accent, map-get(map-get($hues, accent), d)),
+    nb: mat-color($spmka-accent, map-get(map-get($hues, accent), n)), nt: mat-contrast($spmka-accent, map-get(map-get($hues, accent), n)),
+    lb: mat-color($spmka-accent, map-get(map-get($hues, accent), l)), lt: mat-contrast($spmka-accent, map-get(map-get($hues, accent), l)),
+    elb: mat-color($spmka-accent, map-get(map-get($hues, accent), el)), elt: mat-contrast($spmka-accent, map-get(map-get($hues, accent), el))),
+  warn: (
+    db: mat-color($spmka-warn, map-get(map-get($hues, warn), d)), dt: mat-contrast($spmka-warn, map-get(map-get($hues, warn), d)),
+    nb: mat-color($spmka-warn, map-get(map-get($hues, warn), n)), nt: mat-contrast($spmka-warn, map-get(map-get($hues, warn), n)),
+    lb: mat-color($spmka-warn, map-get(map-get($hues, warn), l)), lt: mat-contrast($spmka-warn, map-get(map-get($hues, warn), l)),
+    elb: mat-color($spmka-warn, map-get(map-get($hues, warn), el)), elt: mat-contrast($spmka-warn, map-get(map-get($hues, warn), el))
+  ));
+}
+
+@function add-defaults($color-map, $app-background, $element-background, $element-color, $border-color) {
+  @return map-merge($color-map, (
+    default: (
+      app-background: $app-background,
+      element-background: $element-background,
+      element-color: $element-color,
+      border-color: $border-color
+    )));
+}
+
+@mixin set-variables($color-map, $disabled-fade-out) {
+  $primary-colors: map-get($color-map, primary);
+  $accent-colors: map-get($color-map, accent);
+  $warn-colors: map-get($color-map, warn);
+  $default-colors: map-get($color-map, default);
+  --spmka-dark-primary-background: #{map-get($primary-colors, "db")};
+  --spmka-dark-primary-text: #{map-get($primary-colors, "dt")};
+  --spmka-dark-primary-disabled-text: #{fade-out(map-get($primary-colors, "dt"), $disabled-fade-out)};
+
+  --spmka-dark-accent-background: #{map-get($accent-colors, "db")};
+  --spmka-dark-accent-text: #{map-get($accent-colors, "dt")};
+  --spmka-dark-accent-disabled-text: #{fade-out(map-get($accent-colors, "dt"), $disabled-fade-out)};
+
+  --spmka-dark-warn-background: #{map-get($warn-colors, "db")};
+  --spmka-dark-warn-text: #{map-get($warn-colors, "dt")};
+  --spmka-dark-warn-disabled-text: #{fade-out(map-get($warn-colors, "dt"), $disabled-fade-out)};
+
+  --spmka-normal-primary-background: #{map-get($primary-colors, "nb")};
+  --spmka-normal-primary-text: #{map-get($primary-colors, "nt")};
+  --spmka-normal-primary-disabled-text: #{fade-out(map-get($primary-colors, "nt"), $disabled-fade-out)};
+
+  --spmka-normal-accent-background: #{map-get($accent-colors, "nb")};
+  --spmka-normal-accent-text: #{map-get($accent-colors, "nt")};
+  --spmka-normal-accent-disabled-text: #{fade-out(map-get($accent-colors, "nt"), $disabled-fade-out)};
+
+  --spmka-normal-warn-background: #{map-get($warn-colors, "nb")};
+  --spmka-normal-warn-text: #{map-get($warn-colors, "nt")};
+  --spmka-normal-warn-disabled-text: #{fade-out(map-get($warn-colors, "nt"), $disabled-fade-out)};
+
+  --spmka-light-primary-background: #{map-get($primary-colors, "lb")};
+  --spmka-light-primary-text: #{map-get($primary-colors, "lt")};
+  --spmka-light-primary-disabled-text: #{fade-out(map-get($primary-colors, "lt"), $disabled-fade-out)};
+
+  --spmka-light-accent-background: #{map-get($accent-colors, "lb")};
+  --spmka-light-accent-text: #{map-get($accent-colors, "lt")};
+  --spmka-light-accent-disabled-text: #{fade-out(map-get($accent-colors, "lt"), $disabled-fade-out)};
+
+  --spmka-light-warn-background: #{map-get($warn-colors, "lb")};
+  --spmka-light-warn-text: #{map-get($warn-colors, "lt")};
+  --spmka-light-warn-disabled-text: #{fade-out(map-get($warn-colors, "lt"), $disabled-fade-out)};
+
+  --spmka-extra-light-primary-background: #{map-get($primary-colors, "elb")};
+  --spmka-extra-light-primary-text: #{map-get($primary-colors, "elt")};
+  --spmka-extra-light-primary-disabled-text: #{fade-out(map-get($primary-colors, "elt"), $disabled-fade-out)};
+
+  --spmka-extra-light-accent-background: #{map-get($accent-colors, "elb")};
+  --spmka-extra-light-accent-text: #{map-get($accent-colors, "elt")};
+  --spmka-extra-light-accent-disabled-text: #{fade-out(map-get($accent-colors, "elt"), $disabled-fade-out)};
+
+  --spmka-extra-light-warn-background: #{map-get($warn-colors, "elb")};
+  --spmka-extra-light-warn-text: #{map-get($warn-colors, "elt")};
+  --spmka-extra-light-warn-disabled-text: #{fade-out(map-get($warn-colors, "elt"), $disabled-fade-out)};
+
+  --spmka-app-background: #{map-get($default-colors, app-background)};
+  --spmka-element-background: #{map-get($default-colors, element-background)};
+  --spmka-element-color: #{map-get($default-colors, element-color)};
+  --spmka-border-color: #{map-get($default-colors, border-color)};
+
+  --spmka-dark-overlay: rgba(0, 0, 0, 0.7);
+  --spmka-border-radius: 5px;
+
+  --spmka-dark-home-text-color: rgba(255, 255, 255, 0.3);
+  --spmka-dark-home-background-color: rgb(30, 30, 30);
+  --spmka-dark-home-box-shadow: rgba(0, 0, 0, 0.95);
+}
+
+@mixin light-theme {
+  $light-hues: (
+    primary: (el: 200, l: 300, n: 600, d: 800),
+    accent: (el: 300, l: 400, n: 600, d: 800),
+    warn: (el: 200, l: 300, n: 500, d: 600)
+  );
+  $disabled-fade-out: 0.5;
+
+  // Define the light palettes
+  $spmka-primary: mat-palette($daimler-primary, map-get(map-get($light-hues, primary), n), map-get(map-get($light-hues, primary), l), map-get(map-get($light-hues, primary), d));
+  $spmka-accent: mat-palette($daimler-accent, map-get(map-get($light-hues, accent), n), map-get(map-get($light-hues, accent), l), map-get(map-get($light-hues, accent), d));
+  $spmka-warn: mat-palette($daimler-warn, map-get(map-get($light-hues, warn), n), map-get(map-get($light-hues, warn), l), map-get(map-get($light-hues, warn), d));
+  // Create the theme object (a sass map containing all of the palettes).
+  $spmka-theme: mat-light-theme($spmka-primary, $spmka-accent, $spmka-warn);
+  // Include theme styles for core and each component used in your app.
+  @include angular-material-theme($spmka-theme);
+
+  $colors: add-defaults(create-color-maps($spmka-theme, $light-hues), map-get(map-get($spmka-theme, background), app-bar),
+    map-get($daimler-grey, el), map-get($daimler-grey, d), map-get($daimler-grey, d));
+  @include set-variables($colors, $disabled-fade-out);
+
+  background: var(--spmka-app-background);
+  color: var(--spmka-element-color);
+}
+
+.light-theme {
+  @include light-theme();
+}
+
+@mixin dark-theme {
+  $dark-hues: (
+    primary: (el: 300, l: 500, n: 800, d: 900),
+    accent: (el: 400, l: 500, n: 600, d: 800),
+    warn: (el: 300, l: 500, n: 700, d: 900)
+  );
+  $disabled-fade-out: 0.5;
+  // Defines the dark palettes
+  $spmka-primary: mat-palette($daimler-primary, map-get(map-get($dark-hues, primary), n), map-get(map-get($dark-hues, primary), l), map-get(map-get($dark-hues, primary), d));
+  $spmka-accent: mat-palette($daimler-accent, map-get(map-get($dark-hues, accent), n), map-get(map-get($dark-hues, accent), l), map-get(map-get($dark-hues, accent), d));
+  $spmka-warn: mat-palette($daimler-warn, map-get(map-get($dark-hues, warn), n), map-get(map-get($dark-hues, warn), l), map-get(map-get($dark-hues, warn), d));
+  // Create the theme object (a sass map containing all of the palettes).
+  $spmka-theme: mat-dark-theme($spmka-primary, $spmka-accent, $spmka-warn);
+  // Include theme styles for core and each component used in your app.
+  @include angular-material-theme($spmka-theme);
+
+  $colors: add-defaults(create-color-maps($spmka-theme, $dark-hues), map-get(map-get($spmka-theme, background), app-bar),
+    map-get($daimler-grey, d), map-get($daimler-grey, cool), map-get($daimler-grey, cool));
+  @include set-variables($colors, $disabled-fade-out);
+
+  background: var(--spmka-app-background);
+  color: var(--spmka-element-color);
+
+  .mat-accent {
+    color: mat-color($daimler-accent, 200) !important;
+  }
+
+  // modify text and hover colors for dark scheme
+  .mat-button, .mat-stroked-button {
+    $color-index: 200;
+    $hover-fade-out: 0.9;
+    &.mat-primary {
+      color: mat-color($daimler-primary, $color-index);
+      &:hover {
+        background-color: fade-out(mat-color($daimler-primary, $color-index), $hover-fade-out);
+      }
+    }
+    &.mat-accent {
+      &:hover {
+        background-color: fade-out(mat-color($daimler-accent, $color-index), $hover-fade-out);
+      }
+    }
+    &.mat-warn {
+      &:hover {
+        background-color: fade-out(mat-color($daimler-warn, $color-index), $hover-fade-out);
+      }
+    }
+  }
+
+  .mat-form-field-label {
+    color: var(--spmka-light-primary-text) !important;
+  }
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--spmka-extra-light-primary-text) !important;
+  }
+}
+
+.dark-theme {
+  @include dark-theme();
+}
+
+.normal-element {
+  background-color: var(--spmka-element-background) !important;
+  color: var(--spmka-element-color) !important;
+}
+
+.dark-primary {
+  background-color: var(--spmka-dark-primary-background) !important;
+  color: var(--spmka-dark-primary-text) !important;
+}
+
+.dark-primary-disabled {
+  background-color: var(--spmka-dark-primary-background) !important;
+  color: var(--spmka-dark-primary-disabled-text) !important;
+}
+
+.normal-primary {
+  background-color: var(--spmka-normal-primary-background) !important;
+  color: var(--spmka-normal-primary-text) !important;
+}
+
+.normal-primary-disabled {
+  background-color: var(--spmka-normal-primary-background) !important;
+  color: var(--spmka-normal-primary-disabled-text) !important;
+}
+
+.light-primary {
+  background-color: var(--spmka-light-primary-background) !important;
+  color: var(--spmka-light-primary-text) !important;
+}
+
+.light-primary-disabled {
+  background-color: var(--spmka-light-primary-background) !important;
+  color: var(--spmka-light-primary-disabled-text) !important;
+}
+
+.extra-light-primary {
+  background-color: var(--spmka-extra-light-primary-background) !important;
+  color: var(--spmka-extra-light-primary-text) !important;
+}
+
+.extra-light-primary-disabled {
+  background-color: var(--spmka-extra-light-primary-background) !important;
+  color: var(--spmka-extra-light-primary-disabled-text) !important;
+}
+
+.dark-accent {
+  background-color: var(--spmka-dark-accent-background) !important;
+  color: var(--spmka-dark-accent-text) !important;
+}
+
+.dark-accent-disabled {
+  background-color: var(--spmka-dark-accent-background) !important;
+  color: var(--spmka-dark-accent-disabled-text) !important;
+}
+
+.normal-accent {
+  background-color: var(--spmka-normal-accent-background) !important;
+  color: var(--spmka-normal-accent-text) !important;
+}
+
+.normal-accent-disabled {
+  background-color: var(--spmka-normal-accent-background) !important;
+  color: var(--spmka-normal-accent-disabled-text) !important;
+}
+
+.light-accent {
+  background-color: var(--spmka-light-accent-background) !important;
+  color: var(--spmka-light-accent-text) !important;
+}
+
+.light-accent-disabled {
+  background-color: var(--spmka-light-accent-background) !important;
+  color: var(--spmka-light-accent-disabled-text) !important;
+}
+
+.extra-light-accent {
+  background-color: var(--spmka-extra-light-accent-background) !important;
+  color: var(--spmka-extra-light-accent-text) !important;
+}
+
+.extra-light-accent-disabled {
+  background-color: var(--spmka-extra-light-accent-background) !important;
+  color: var(--spmka-extra-light-accent-disabled-text) !important;
+}
+
+.dark-warn {
+  background-color: var(--spmka-dark-warn-background) !important;
+  color: var(--spmka-dark-warn-text) !important;
+}
+
+.dark-warn-disabled {
+  background-color: var(--spmka-dark-warn-background) !important;
+  color: var(--spmka-dark-warn-disabled-text) !important;
+}
+
+.normal-warn {
+  background-color: var(--spmka-normal-warn-background) !important;
+  color: var(--spmka-normal-warn-text) !important;
+}
+
+.normal-warn-disabled {
+  background-color: var(--spmka-normal-warn-background) !important;
+  color: var(--spmka-normal-warn-disabled-text) !important;
+}
+
+.light-warn {
+  background-color: var(--spmka-light-warn-background) !important;
+  color: var(--spmka-light-warn-text) !important;
+}
+
+.light-warn-disabled {
+  background-color: var(--spmka-light-warn-background) !important;
+  color: var(--spmka-light-warn-disabled-text) !important;
+}
+
+.extra-light-warn {
+  background-color: var(--spmka-extra-light-warn-background) !important;
+  color: var(--spmka-extra-light-warn-text) !important;
+}
+
+.extra-light-warn-disabled {
+  background-color: var(--spmka-extra-light-warn-background) !important;
+  color: var(--spmka-extra-light-warn-disabled-text) !important;
+}
