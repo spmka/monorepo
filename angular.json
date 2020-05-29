@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "defaultProject": "control-tower",
   "projects": {
     "control-tower": {
       "projectType": "application",
@@ -86,7 +87,10 @@
               "apps/control-tower/tsconfig.app.json",
               "apps/control-tower/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/control-tower/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/control-tower/**"
+            ]
           }
         },
         "test": {
@@ -121,8 +125,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/control-tower-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/control-tower-e2e/**"]
+            "tsConfig": [
+              "apps/control-tower-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/control-tower-e2e/**"
+            ]
           }
         }
       }
@@ -210,7 +219,10 @@
               "libs/control-tower/domain/tsconfig.lib.json",
               "libs/control-tower/domain/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/control-tower/domain/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/control-tower/domain/**"
+            ]
           }
         },
         "test": {
@@ -314,7 +326,10 @@
               "apps/cors/tsconfig.app.json",
               "apps/cors/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/cors/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/cors/**"
+            ]
           }
         },
         "test": {
@@ -349,8 +364,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/cors-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/cors-e2e/**"]
+            "tsConfig": [
+              "apps/cors-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/cors-e2e/**"
+            ]
           }
         }
       }
@@ -368,7 +388,10 @@
               "libs/cors/feature-home/tsconfig.lib.json",
               "libs/cors/feature-home/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/cors/feature-home/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cors/feature-home/**"
+            ]
           }
         },
         "test": {
@@ -435,7 +458,10 @@
               "libs/cors/domain/tsconfig.lib.json",
               "libs/cors/domain/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/cors/domain/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cors/domain/**"
+            ]
           }
         },
         "test": {
@@ -467,7 +493,10 @@
               "libs/shared/ui-buttons/tsconfig.lib.json",
               "libs/shared/ui-buttons/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui-buttons/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui-buttons/**"
+            ]
           }
         },
         "test": {
@@ -499,7 +528,10 @@
               "libs/shared/ui-cards/tsconfig.lib.json",
               "libs/shared/ui-cards/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui-cards/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui-cards/**"
+            ]
           }
         },
         "test": {
@@ -531,7 +563,10 @@
               "libs/shared/util-text/tsconfig.lib.json",
               "libs/shared/util-text/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/util-text/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/util-text/**"
+            ]
           }
         },
         "test": {
@@ -574,7 +609,9 @@
               "apps/template/src/favicon.ico",
               "apps/template/src/assets"
             ],
-            "styles": ["apps/template/src/styles.scss"],
+            "styles": [
+              "apps/template/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -633,7 +670,10 @@
               "apps/template/tsconfig.app.json",
               "apps/template/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/template/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/template/**"
+            ]
           }
         },
         "test": {
@@ -668,8 +708,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/template-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/template-e2e/**"]
+            "tsConfig": [
+              "apps/template-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/template-e2e/**"
+            ]
           }
         }
       }
@@ -687,7 +732,10 @@
               "libs/template/feature-form/tsconfig.lib.json",
               "libs/template/feature-form/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/template/feature-form/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/template/feature-form/**"
+            ]
           }
         },
         "test": {
@@ -697,6 +745,76 @@
             "tsConfig": "libs/template/feature-form/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/template/feature-form/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-util-tools": {
+      "projectType": "library",
+      "root": "libs/shared/util-tools",
+      "sourceRoot": "libs/shared/util-tools/src",
+      "prefix": "spmka",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/util-tools/tsconfig.lib.json",
+              "libs/shared/util-tools/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/util-tools/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/util-tools/jest.config.js",
+            "tsConfig": "libs/shared/util-tools/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/util-tools/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-ui-base": {
+      "projectType": "library",
+      "root": "libs/shared/ui-base",
+      "sourceRoot": "libs/shared/ui-base/src",
+      "prefix": "spmka",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui-base/tsconfig.lib.json",
+              "libs/shared/ui-base/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui-base/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui-base/jest.config.js",
+            "tsConfig": "libs/shared/ui-base/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/ui-base/src/test-setup.ts"
           }
         }
       },
@@ -718,6 +836,5 @@
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
     }
-  },
-  "defaultProject": "control-tower"
+  }
 }
