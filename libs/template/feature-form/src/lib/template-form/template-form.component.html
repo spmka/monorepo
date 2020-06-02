@@ -1,76 +1,20 @@
 <form [formGroup]="defaultFormGroup" autocomplete="off">
   <div>
-    <p>This is a normal input field, the label will move up when you enter a value</p>
+    <p>{{txIds.normalInput.text | i18n}}</p>
     <mat-form-field>
-      <input matInput placeholder="Enter a number" [formControlName]="formIds.input">
+      <input matInput [placeholder]="txIds.normalInput.placeHolder | i18n" [formControlName]="formIds.input">
     </mat-form-field>
   </div>
 
   <div></div>
 
   <div>
-    <p>This is an input field with validation, an error message is shown if no value is given or a wrong email is
-      entered</p>
+    <p>{{txIds.emailInput.text | i18n}}</p>
     <mat-form-field>
-      <input matInput placeholder="Enter your email" [formControlName]="formIds.email" required>
+      <input matInput [placeholder]="txIds.emailInput.placeHolder | i18n" [formControlName]="formIds.email" required>
       <mat-error *ngIf="getControl(formIds.email).invalid">{{getEmailErrorMessage(formIds.email)}}</mat-error>
     </mat-form-field>
   </div>
-
-  <div>
-    <p>This is an input field with validation, an error message is shown if no value is given or a wrong email is
-      entered it shows the error status</p>
-    <mat-form-field>
-      <input matInput placeholder="Enter your email" [formControlName]="formIds.emailWithError" required>
-      <mat-error *ngIf="getControl(formIds.emailWithError).invalid">
-        {{getEmailErrorMessage(formIds.emailWithError)}}</mat-error>
-    </mat-form-field>
-  </div>
-
-  <div>
-    <p>This is a read-only input field, you can't change the value</p>
-    <mat-form-field>
-      <input [readonly]="true" matInput [formControlName]="formIds.inputReadOnly" placeholder="Price">
-    </mat-form-field>
-  </div>
-
-  <div>
-    <p>This is a read-only and empty input field, you can't change the value and the label is shown</p>
-    <mat-form-field>
-      <input [readonly]="true" matInput [formControlName]="formIds.inputReadOnlyNoContent" placeholder="Price">
-    </mat-form-field>
-  </div>
-
-  <div>
-    <p>This is a read-only and empty input field, you can't change the value and the label is moved up as if a value is
-      entered</p>
-    <mat-form-field floatLabel="always">
-      <input [readonly]="true" matInput [formControlName]="formIds.inputReadOnlyNoContent" placeholder="Price">
-    </mat-form-field>
-  </div>
-
-  <div>
-    <p>This is a disabled input field, you can't change the value</p>
-    <mat-form-field>
-      <input matInput [formControlName]="formIds.inputDisabled" placeholder="Price">
-    </mat-form-field>
-  </div>
-
-  <div>
-    <p>This is a disabled ans empty input field with no content, you can't change the value and the label is shown</p>
-    <mat-form-field>
-      <input matInput [formControlName]="formIds.inputDisabledNoContent" placeholder="Price">
-    </mat-form-field>
-  </div>
-
-  <div>
-    <p>This is a disabled and empty input field, you can't change the value and the label is moved up as if a value is
-      entered</p>
-    <mat-form-field floatLabel="always">
-      <input matInput [formControlName]="formIds.inputDisabledNoContent" placeholder="Price">
-    </mat-form-field>
-  </div>
-
 </form>
 
 
