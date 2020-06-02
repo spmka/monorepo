@@ -94,32 +94,17 @@ export class ObjectTools {
   }
 
   /**
-   * Returns true if the given object is empty (undefined, null or {}).
-   * @param obj the object to test.
+   * Returns true if the given value is empty (undefined, null, '' or {}).
+   * @param value the value to test.
    * @returns true if the given object is empty (undefined, null or {}), false otherwise.
    */
-  public static isEmpty(obj: any): boolean {
-    if ((obj === undefined) || (obj === null)) {
+  public static isEmpty(value: any): boolean {
+    if ((value === undefined) || (value === null) || (value === '')) {
       return true;
-    } else {
-      return JSON.stringify(obj) === JSON.stringify({});
+    } else if (_.isObject(value)) {
+      return _.isEmpty(value);
     }
-  }
-
-  /**
-   * Returns true if the given object is empty (undefined, null, '' or {}).
-   * @param obj the object to test.
-   * @returns true if the given object is empty (undefined, null, '' or {}), false otherwise.
-   */
-  public static isEmptyWithStr(obj: any): boolean {
-    if ((obj === undefined) || (obj === null) || (obj === '')) {
-      return true;
-    }
-    if (typeof obj === 'object') {
-      return Object.keys(obj).length === 0;
-    } else {
-      return false;
-    }
+    return false;
   }
 
   /**

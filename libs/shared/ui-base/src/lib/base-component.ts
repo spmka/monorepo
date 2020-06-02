@@ -13,12 +13,10 @@ export class BaseComponent implements OnInit, OnDestroy {
 
   /** Angular life cycle method - empty at the moment */
   public ngOnInit(): void {
-    console.log('BaseComponent ngOnInit()');
   }
 
   /** Angular life cycle method - Release subscriptions */
   public ngOnDestroy(): void {
-    console.log('BaseComponent ngOnDestroy()');
     this.subscriptions.unsubscribe();
   }
 

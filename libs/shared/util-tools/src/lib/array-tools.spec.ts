@@ -1,4 +1,4 @@
-import { ArrayTools } from './array-tools';
+import { ArrayTools } from '@spmka/shared/util-tools';
 
 describe('ArrayTools', () => {
 

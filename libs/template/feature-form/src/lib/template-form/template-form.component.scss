@@ -1,7 +1,6 @@
 p {
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px 5px 10px;
+  padding: 0 5px 0 5px;
   margin: 0;
 }
 
@@ -21,7 +20,7 @@ form {
     justify-items: stretch;
   }
 
-  mat-form-field, mat-checkbox, mat-radio-button {
+  mat-form-field {
     padding: 0 5px 0 5px;
   }
 }

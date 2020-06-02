@@ -10,63 +10,29 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spmka/control-tower/feature-home": [
-        "libs/control-tower/feature-home/src/index.ts"
-      ],
-      "@spmka/control-tower/feature-charts": [
-        "libs/control-tower/feature-charts/src/index.ts"
-      ],
-      "@spmka/control-tower/domain": [
-        "libs/control-tower/domain/src/index.ts"
-      ],
-      "@spmka/cors/feature-home": [
-        "libs/cors/feature-home/src/index.ts"
-      ],
-      "@spmka/cors/feature-workflow-returns": [
-        "libs/cors/feature-workflow-returns/src/index.ts"
-      ],
-      "@spmka/cors/domain": [
-        "libs/cors/domain/src/index.ts"
-      ],
-      "@spmka/shared/ui-buttons": [
-        "libs/shared/ui-buttons/src/index.ts"
-      ],
-      "@spmka/shared/ui-cards": [
-        "libs/shared/ui-cards/src/index.ts"
-      ],
-      "@spmka/shared/util-text": [
-        "libs/shared/util-text/src/index.ts"
-      ],
-      "@spmka/template/feature-form": [
-        "libs/template/feature-form/src/index.ts"
-      ],
-      "@spmka/shared/util-assets": [
-        "libs/shared/util-assets/src/index.ts"
-      ],
-      "@spmka/shared/util-objects": [
-        "libs/shared/util-objects/src/index.ts"
-      ],
-      "@spmka/shared/util-tools": [
-        "libs/shared/util-tools/src/index.ts"
-      ],
-      "@spmka/shared/ui-base": [
-        "libs/shared/ui-base/src/index.ts"
-      ]
+      "@spmka/control-tower/feature-home": ["libs/control-tower/feature-home/src/index.ts"],
+      "@spmka/control-tower/feature-charts": ["libs/control-tower/feature-charts/src/index.ts"],
+      "@spmka/control-tower/domain": ["libs/control-tower/domain/src/index.ts"],
+      "@spmka/cors/feature-home": ["libs/cors/feature-home/src/index.ts"],
+      "@spmka/cors/feature-workflow-returns": ["libs/cors/feature-workflow-returns/src/index.ts"],
+      "@spmka/cors/domain": ["libs/cors/domain/src/index.ts"],
+      "@spmka/shared/ui-buttons": ["libs/shared/ui-buttons/src/index.ts"],
+      "@spmka/shared/ui-cards": ["libs/shared/ui-cards/src/index.ts"],
+      "@spmka/shared/util-text": ["libs/shared/util-text/src/index.ts"],
+      "@spmka/template/feature-form": ["libs/template/feature-form/src/index.ts"],
+      "@spmka/shared/util-assets": ["libs/shared/util-assets/src/index.ts"],
+      "@spmka/shared/util-objects": ["libs/shared/util-objects/src/index.ts"],
+      "@spmka/shared/util-tools": ["libs/shared/util-tools/src/index.ts"],
+      "@spmka/shared/ui-base": ["libs/shared/ui-base/src/index.ts"],
+      "@spmka/shared/util-i18n": ["libs/shared/util-i18n/src/index.ts"],
+      "@spmka/shared/util-logger": ["libs/shared/util-logger/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

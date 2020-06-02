@@ -1,4 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { TemplateFormComponent } from './template-form.component';
 
@@ -8,9 +11,9 @@ describe('TemplateFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TemplateFormComponent ]
-    })
-    .compileComponents();
+      imports: [BrowserAnimationsModule, FormsModule, ReactiveFormsModule, MatInputModule],
+      declarations: [TemplateFormComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
