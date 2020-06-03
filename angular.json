@@ -773,6 +773,67 @@
           "style": "scss"
         }
       }
+    },
+    "template-util-i18n": {
+      "projectType": "library",
+      "root": "libs/template/util-i18n",
+      "sourceRoot": "libs/template/util-i18n/src",
+      "prefix": "spmka",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/template/util-i18n/tsconfig.lib.json", "libs/template/util-i18n/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/template/util-i18n/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/template/util-i18n/jest.config.js",
+            "tsConfig": "libs/template/util-i18n/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/template/util-i18n/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "template-feature-locale-switch": {
+      "projectType": "library",
+      "root": "libs/template/feature-locale-switch",
+      "sourceRoot": "libs/template/feature-locale-switch/src",
+      "prefix": "spmka",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/template/feature-locale-switch/tsconfig.lib.json",
+              "libs/template/feature-locale-switch/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/template/feature-locale-switch/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/template/feature-locale-switch/jest.config.js",
+            "tsConfig": "libs/template/feature-locale-switch/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/template/feature-locale-switch/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -8,13 +8,19 @@ import {
   AbstractTranslationService,
   AbstractTranslationDataService
 } from '@spmka/shared/util-i18n';
-import {TranslationService} from '../core/i18n/translation.service';
-import {TranslationDataService} from '../core/i18n/translation-data.service';
+import {TranslationService, TranslationDataService} from '@spmka/template/util-i18n';
+import {TemplateFeatureLocaleSwitchModule} from '@spmka/template/feature-locale-switch';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, BrowserAnimationsModule, TemplateFeatureFormModule, SharedUtilI18nModule],
+      imports: [
+        RouterTestingModule,
+        BrowserAnimationsModule,
+        TemplateFeatureFormModule,
+        TemplateFeatureLocaleSwitchModule,
+        SharedUtilI18nModule
+      ],
       providers: [
         {
           provide: AbstractTranslationService,

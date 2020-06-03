@@ -11,20 +11,27 @@ import {AbstractTranslationService} from '@spmka/shared/util-i18n';
   styleUrls: ['./template-form.component.scss']
 })
 export class TemplateFormComponent extends BaseFormComponent implements OnInit {
-  public formIds = TemplateInputFormIds.templateInputFormIds;
+  /** Ids for form controls */
+  public formIds = TemplateInputFormIds.inputForm;
+  /** Trnalstion keys */
   public txIds = TemplateFormTranslationKeys.translationKeys.templateForm;
 
+  /**
+   * Constructor.
+   * @param txService the injected translation service.
+   */
   public constructor(private txService: AbstractTranslationService) {
     super();
   }
 
+  /** Angular life cycle method */
   public ngOnInit(): void {
     super.ngOnInit();
     this.createForm();
   }
 
   /**
-   * Method for E-mail input field validation.
+   * Method for email input field validation.
    * @param controlName the controls name to check.
    */
   public getEmailErrorMessage(controlName: string) {
@@ -35,6 +42,7 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
       : '';
   }
 
+  /** Creates the controls for the form */
   private createForm() {
     this.addEmptyControl(this.formIds.input);
     this.addEmptyControl(this.formIds.email).setValidators(Validators.email);

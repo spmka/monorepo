@@ -15,7 +15,7 @@ export const english: Language = {
 };
 
 export const txDemoDataEN = {
-  app: {
+  localeSwitch: {
     buttons: {
       english: 'English',
       german: 'German'
@@ -36,7 +36,7 @@ export const txDemoDataEN = {
 };
 
 export const txDemoDataDE = {
-  app: {
+  localeSwitch: {
     buttons: {
       english: 'Englisch',
       german: 'Deutsch'

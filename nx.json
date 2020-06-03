@@ -14,73 +14,147 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
   "projects": {
     "control-tower": {
-      "tags": ["scope:control-tower", "type:app"]
+      "tags": [
+        "scope:control-tower",
+        "type:app"
+      ]
     },
     "control-tower-e2e": {
       "tags": [],
-      "implicitDependencies": ["control-tower"]
+      "implicitDependencies": [
+        "control-tower"
+      ]
     },
     "control-tower-feature-home": {
-      "tags": ["scope:control-tower", "type:feature"]
+      "tags": [
+        "scope:control-tower",
+        "type:feature"
+      ]
     },
     "control-tower-feature-charts": {
-      "tags": ["scope:control-tower", "type:feature"]
+      "tags": [
+        "scope:control-tower",
+        "type:feature"
+      ]
     },
     "control-tower-domain": {
-      "tags": ["scope:control-tower", "type:domain"]
+      "tags": [
+        "scope:control-tower",
+        "type:domain"
+      ]
     },
     "cors": {
-      "tags": ["scope:cors", "type:app"]
+      "tags": [
+        "scope:cors",
+        "type:app"
+      ]
     },
     "cors-e2e": {
       "tags": [],
-      "implicitDependencies": ["cors"]
+      "implicitDependencies": [
+        "cors"
+      ]
     },
     "cors-feature-home": {
-      "tags": ["scope:cors", "type:feature"]
+      "tags": [
+        "scope:cors",
+        "type:feature"
+      ]
     },
     "cors-feature-workflow-returns": {
-      "tags": ["scope:cors", "type:feature"]
+      "tags": [
+        "scope:cors",
+        "type:feature"
+      ]
     },
     "cors-domain": {
-      "tags": ["scope:cors", "type:domain"]
+      "tags": [
+        "scope:cors",
+        "type:domain"
+      ]
     },
     "shared-ui-base": {
-      "tags": ["scope:shared", "type:ui"]
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
     },
     "shared-ui-buttons": {
-      "tags": ["scope:shared", "type:ui"]
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
     },
     "shared-ui-cards": {
-      "tags": ["scope:shared", "type:ui"]
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
     },
     "shared-util-i18n": {
-      "tags": ["scope:shared", "type:util"]
+      "tags": [
+        "scope:shared",
+        "type:util"
+      ]
     },
     "shared-util-logger": {
-      "tags": ["scope:shared", "type:util"]
+      "tags": [
+        "scope:shared",
+        "type:util"
+      ]
     },
     "shared-util-text": {
-      "tags": ["scope:shared", "type:util"]
+      "tags": [
+        "scope:shared",
+        "type:util"
+      ]
     },
     "shared-util-tools": {
-      "tags": ["scope:shared", "type:util"]
+      "tags": [
+        "scope:shared",
+        "type:util"
+      ]
     },
     "template": {
-      "tags": ["scope:template", "type:app"]
-    },
-    "template-e2e": {
-      "tags": [],
-      "implicitDependencies": ["template"]
+      "tags": [
+        "scope:template",
+        "type:app"
+      ]
     },
     "template-feature-form": {
-      "tags": ["scope:template", "type:feature"]
+      "tags": [
+        "scope:template",
+        "type:feature"
+      ]
+    },
+    "template-feature-locale-switch": {
+      "tags": [
+        "scope:template",
+        "type:feature"
+      ]
+    },
+    "template-util-i18n": {
+      "tags": [
+        "scope:template",
+        "type:util"
+      ]
+    },
+    "template-e2e": {
+      "tags": [
+        "scope:template-e2e",
+        "type:app"
+      ]
     }
   }
 }

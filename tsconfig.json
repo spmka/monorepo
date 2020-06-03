@@ -31,7 +31,9 @@
       "@spmka/shared/util-tools": ["libs/shared/util-tools/src/index.ts"],
       "@spmka/shared/ui-base": ["libs/shared/ui-base/src/index.ts"],
       "@spmka/shared/util-i18n": ["libs/shared/util-i18n/src/index.ts"],
-      "@spmka/shared/util-logger": ["libs/shared/util-logger/src/index.ts"]
+      "@spmka/shared/util-logger": ["libs/shared/util-logger/src/index.ts"],
+      "@spmka/template/util-i18n": ["libs/template/util-i18n/src/index.ts"],
+      "@spmka/template/feature-locale-switch": ["libs/template/feature-locale-switch/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

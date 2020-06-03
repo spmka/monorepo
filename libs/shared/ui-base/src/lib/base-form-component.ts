@@ -8,13 +8,26 @@ type ValueChangeCallback = (value) => void;
 
 /** The base component for form based components */
 export class BaseFormComponent extends BaseComponent {
-  /** All methods can operate also on this form -> must be set if it should be a different one. */
-  public defaultFormGroup: FormGroup;
 
   /** Constructor. */
   public constructor() {
     super();
     this.setDefaultFormGroup(new FormGroup({}));
+  }
+  /** All methods can operate also on this form -> must be set if it should be a different one. */
+  public defaultFormGroup: FormGroup;
+
+  /**
+   * Adds a value change listener to the control, that is triggered after a debounce time and only if the new
+   * and returns the created subscription.
+   * @param control The control to add the listener.
+   * @param valueChangeListener The value change listener callback.
+   * @param debounceTimeMs The optional debounce time in ms.
+   */
+  public static addDistinctDebounceChangeListener(control: FormControl,
+    valueChangeListener: (newValue: any) => void, debounceTimeMs: number = 500): Subscription {
+    return control.valueChanges.pipe(debounceTime(debounceTimeMs), distinctUntilChanged())
+      .subscribe(newValue => valueChangeListener(newValue));
   }
 
   /**
@@ -211,18 +224,5 @@ export class BaseFormComponent extends BaseComponent {
    */
   protected clearControlErrors(controlName: string, formGroup: FormGroup = this.defaultFormGroup) {
     this.getControl(controlName, formGroup).setErrors(null);
-  }
-
-  /**
-   * Adds a value change listener to the control, that is triggered after a debounce time and only if the new
-   * and returns the created subscription.
-   * @param control The control to add the listener.
-   * @param valueChangeListener The value change listener callback.
-   * @param debounceTimeMs The optional debounce time in ms.
-   */
-  public static addDistinctDebounceChangeListener(control: FormControl,
-    valueChangeListener: (newValue: any) => void, debounceTimeMs: number = 500): Subscription {
-    return control.valueChanges.pipe(debounceTime(debounceTimeMs), distinctUntilChanged())
-      .subscribe(newValue => valueChangeListener(newValue));
   }
 }

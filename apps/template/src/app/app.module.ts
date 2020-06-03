@@ -7,10 +7,10 @@ import {RouterModule} from '@angular/router';
 
 import {MatButtonModule} from '@angular/material/button';
 
-import {TemplateFeatureFormModule} from '@spmka/template/feature-form';
 import {AbstractTranslationService, AbstractTranslationDataService, SharedUtilI18nModule} from '@spmka/shared/util-i18n';
-import {TranslationService} from '../core/i18n/translation.service';
-import {TranslationDataService} from '../core/i18n/translation-data.service';
+import {TemplateFeatureFormModule} from '@spmka/template/feature-form';
+import {TemplateFeatureLocaleSwitchModule} from '@spmka/template/feature-locale-switch';
+import {TranslationService, TranslationDataService} from '@spmka/template/util-i18n';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +19,7 @@ import {TranslationDataService} from '../core/i18n/translation-data.service';
     BrowserAnimationsModule,
     RouterModule.forRoot([], {initialNavigation: 'enabled'}),
     TemplateFeatureFormModule,
+    TemplateFeatureLocaleSwitchModule,
     MatButtonModule,
     SharedUtilI18nModule
   ],

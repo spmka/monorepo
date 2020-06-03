@@ -1,14 +1,9 @@
-import { StructureKeyTools } from '@spmka/shared/util-tools';
+import {StructureKeyTools} from '@spmka/shared/util-tools';
 
 /** Constants for input field identification */
 export class TemplateInputFormIds {
-  @StructureKeyTools.generateFormIds() public static templateInputFormIds = {
+  @StructureKeyTools.generateFormIds() public static inputForm = {
     input: '',
-    email: '',
-    emailWithError: '',
-    inputReadOnly: '',
-    inputReadOnlyNoContent: '',
-    inputDisabled: '',
-    inputDisabledNoContent: '',
+    email: ''
   };
 }
