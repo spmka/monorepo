@@ -1,0 +1,18 @@
+{
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": "./src/plugins/index",
+  "supportFile": "./src/support/index.ts",
+  "video": true,
+  "videosFolder": "../../dist/cypress/apps/template-e2e-cucumber/videos",
+  "screenshotsFolder": "../../dist/cypress/apps/template-e2e-cucumber/screenshots",
+  "chromeWebSecurity": false,
+  "testFiles": "**/*.feature",
+  "defaultCommandTimeout": 4000,
+  "execTimeout": 10000,
+  "taskTimeout": 10000,
+  "pageLoadTimeout": 10000,
+  "responseTimeout": 10000
+}

@@ -834,6 +834,33 @@
           "style": "scss"
         }
       }
+    },
+    "template-e2e-cucumber": {
+      "root": "apps/template-e2e-cucumber",
+      "sourceRoot": "apps/template-e2e-cucumber/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/template-e2e-cucumber/cypress.json",
+            "tsConfig": "apps/template-e2e-cucumber/tsconfig.e2e.json",
+            "devServerTarget": "template:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "template:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/template-e2e-cucumber/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/template-e2e-cucumber/**"]
+          }
+        }
+      }
     }
   },
   "cli": {
