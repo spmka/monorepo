@@ -87,10 +87,6 @@
     "template-e2e": {
       "tags": ["scope:template-e2e", "type:app"],
       "implicitDependencies": ["template"]
-    },
-    "template-e2e-cucumber": {
-      "tags": ["scope:template-e2e-cucumber", "type:app"],
-      "implicitDependencies": ["template"]
     }
   }
 }
