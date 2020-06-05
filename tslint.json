@@ -79,7 +79,7 @@
           },
           {
             "sourceTag": "scope:template-e2e",
-            "onlyDependOnLibsWithTags": ["scope:template-e2e", "scope:template", "scope:shared"]
+            "onlyDependOnLibsWithTags": ["scope:template-e2e", "scope:template", "scope:shared", "scope:shared-e2e"]
           },
           {
             "sourceTag": "scope:shared",

@@ -87,6 +87,12 @@
     "template-e2e": {
       "tags": ["scope:template-e2e", "type:app"],
       "implicitDependencies": ["template"]
+    },
+    "shared-e2e-util-tools": {
+      "tags": ["scope:shared-e2e", "type:util"]
+    },
+    "shared-e2e-util-steps": {
+      "tags": ["scope:shared-e2e", "type:util"]
     }
   }
 }

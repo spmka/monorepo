@@ -1,11 +1,10 @@
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import { KeysDirective } from './keys.directive';
 
-        import { NgModule } from '@angular/core';
-        import { CommonModule } from '@angular/common';
-        
-        @NgModule({
-          imports: [
-            CommonModule
-          ]
-        })
-        export class SharedUiBaseModule { }
-        
+@NgModule({
+  declarations: [KeysDirective],
+  imports: [CommonModule],
+  exports: [KeysDirective]
+})
+export class SharedUiBaseModule {}

@@ -7,7 +7,11 @@ import {RouterModule} from '@angular/router';
 
 import {MatButtonModule} from '@angular/material/button';
 
-import {AbstractTranslationService, AbstractTranslationDataService, SharedUtilI18nModule} from '@spmka/shared/util-i18n';
+import {
+  AbstractTranslationService,
+  AbstractTranslationDataService,
+  SharedUtilI18nModule
+} from '@spmka/shared/util-i18n';
 import {TemplateFeatureFormModule} from '@spmka/template/feature-form';
 import {TemplateFeatureLocaleSwitchModule} from '@spmka/template/feature-locale-switch';
 import {TranslationService, TranslationDataService} from '@spmka/template/util-i18n';
