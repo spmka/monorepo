@@ -834,6 +834,70 @@
           "style": "scss"
         }
       }
+    },
+    "shared-e2e-util-tools": {
+      "projectType": "library",
+      "root": "libs/shared-e2e/util-tools",
+      "sourceRoot": "libs/shared-e2e/util-tools/src",
+      "prefix": "spmka",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared-e2e/util-tools/tsconfig.lib.json",
+              "libs/shared-e2e/util-tools/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared-e2e/util-tools/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared-e2e/util-tools/jest.config.js",
+            "tsConfig": "libs/shared-e2e/util-tools/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared-e2e/util-tools/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-e2e-util-steps": {
+      "projectType": "library",
+      "root": "libs/shared-e2e/util-steps",
+      "sourceRoot": "libs/shared-e2e/util-steps/src",
+      "prefix": "spmka",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared-e2e/util-steps/tsconfig.lib.json",
+              "libs/shared-e2e/util-steps/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared-e2e/util-steps/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared-e2e/util-steps/jest.config.js",
+            "tsConfig": "libs/shared-e2e/util-steps/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared-e2e/util-steps/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
