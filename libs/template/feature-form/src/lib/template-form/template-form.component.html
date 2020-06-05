@@ -2,7 +2,7 @@
   <div>
     <p>{{txIds.normalInput.text | i18n}}</p>
     <mat-form-field>
-      <input [id]="formIds.input" matInput [placeholder]="txIds.normalInput.placeHolder | i18n" [formControlName]="formIds.input">
+      <input [keys]="formIds.input" matInput [placeholder]="txIds.normalInput.placeHolder | i18n" [formControlName]="formIds.input">
     </mat-form-field>
   </div>
 
@@ -11,7 +11,7 @@
   <div>
     <p>{{txIds.emailInput.text | i18n}}</p>
     <mat-form-field>
-      <input [id]="formIds.email" matInput [placeholder]="txIds.emailInput.placeHolder | i18n" [formControlName]="formIds.email" required>
+      <input [keys]="formIds.email" matInput [placeholder]="txIds.emailInput.placeHolder | i18n" [formControlName]="formIds.email" required>
       <mat-error *ngIf="getControl(formIds.email).invalid">{{getEmailErrorMessage(formIds.email)}}</mat-error>
     </mat-form-field>
   </div>
