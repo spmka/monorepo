@@ -11,6 +11,7 @@ import {
 } from '@spmka/shared/util-i18n';
 // TODO: Check if this tests with linking to apps make sense
 import {TranslationService, TranslationDataService} from '@spmka/template/util-i18n';
+import { SharedUiBaseModule } from '@spmka/shared/ui-base';
 
 describe('TemplateFormComponent', () => {
   let component: TemplateFormComponent;
@@ -18,7 +19,14 @@ describe('TemplateFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, FormsModule, ReactiveFormsModule, MatInputModule, SharedUtilI18nModule],
+      imports: [
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        SharedUtilI18nModule,
+        SharedUiBaseModule
+      ],
       providers: [
         {
           provide: AbstractTranslationService,
@@ -41,5 +49,7 @@ describe('TemplateFormComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    console.log(component.formIds);
+    console.log(component.txIds);
   });
 });

@@ -13,7 +13,7 @@ import {AbstractTranslationService} from '@spmka/shared/util-i18n';
 export class TemplateFormComponent extends BaseFormComponent implements OnInit {
   /** Ids for form controls */
   public formIds = TemplateInputFormIds.inputForm;
-  /** Trnalstion keys */
+  /** Translation keys */
   public txIds = TemplateFormTranslationKeys.translationKeys.templateForm;
 
   /**
@@ -44,7 +44,7 @@ export class TemplateFormComponent extends BaseFormComponent implements OnInit {
 
   /** Creates the controls for the form */
   private createForm() {
-    this.addEmptyControl(this.formIds.input);
-    this.addEmptyControl(this.formIds.email).setValidators(Validators.email);
+    this.addEmptyControl(this.formIds.numberInput);
+    this.addEmptyControl(this.formIds.emailInput).setValidators(Validators.email);
   }
 }

@@ -22,13 +22,13 @@ export const txDemoDataEN = {
     }
   },
   templateForm: {
-    normalInput: {
+    numberInput: {
       text: 'This is a normal input field, the label will move up when you enter a value',
-      placeHolder: 'Enter a number'
+      placeholder: 'Enter a number'
     },
     emailInput: {
       text: 'This is an input field with validation, an error message is shown if no value is given or a wrong email is entered',
-      placeHolder: 'Enter your email',
+      placeholder: 'Enter your email',
       errorMessageEmpty: 'You must enter a value',
       errorMessageWrong: 'Not a valid email'
     }

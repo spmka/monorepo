@@ -1,8 +1,11 @@
 <form [formGroup]="defaultFormGroup" autocomplete="off">
   <div>
-    <p>{{txIds.normalInput.text | i18n}}</p>
+    <p>{{txIds.numberInput.text | i18n}}</p>
     <mat-form-field>
-      <input [keys]="formIds.input" matInput [placeholder]="txIds.normalInput.placeHolder | i18n" [formControlName]="formIds.input">
+      <input matInput
+        [keys]="formIds.numberInput"
+        [placeholder]="txIds.numberInput.placeholder | i18n"
+        [formControlName]="formIds.numberInput">
     </mat-form-field>
   </div>
 
@@ -11,8 +14,13 @@
   <div>
     <p>{{txIds.emailInput.text | i18n}}</p>
     <mat-form-field>
-      <input [keys]="formIds.email" matInput [placeholder]="txIds.emailInput.placeHolder | i18n" [formControlName]="formIds.email" required>
-      <mat-error *ngIf="getControl(formIds.email).invalid">{{getEmailErrorMessage(formIds.email)}}</mat-error>
+      <input matInput
+        [keys]="formIds.emailInput"
+        [placeholder]="txIds.emailInput.placeholder | i18n"
+        [formControlName]="formIds.emailInput" required>
+      <mat-error *ngIf="getControl(formIds.emailInput).invalid">
+        {{getEmailErrorMessage(formIds.emailInput)}}
+      </mat-error>
     </mat-form-field>
   </div>
 </form>

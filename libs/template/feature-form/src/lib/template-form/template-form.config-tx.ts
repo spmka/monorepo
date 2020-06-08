@@ -4,13 +4,13 @@ import {AbstractTranslationDataService} from '@spmka/shared/util-i18n';
 export class TemplateFormTranslationKeys {
   @AbstractTranslationDataService.collectTranslation('templateForm') public static readonly translationKeys = {
     templateForm: {
-      normalInput: {
+      numberInput: {
         text: '',
-        placeHolder: ''
+        placeholder: ''
       },
       emailInput: {
         text: '',
-        placeHolder: '',
+        placeholder: '',
         errorMessageEmpty: '',
         errorMessageWrong: ''
       }
