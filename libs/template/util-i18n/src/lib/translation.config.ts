@@ -43,13 +43,13 @@ export const txDemoDataDE = {
     }
   },
   templateForm: {
-    normalInput: {
+    numberInput: {
       text: 'Dies ist ein normales Eingabefeld, der Label wandert nach oben wenn sie einen Wert eingeben',
-      placeHolder: 'Geben sie eine Zahl ein'
+      placeholder: 'Geben sie eine Zahl ein'
     },
     emailInput: {
       text: 'Dies ist ein Eingabefeld mit Validierung, eine Fehlermeldung erschein nach der Eingab einer ungültigen Adresse',
-      placeHolder: 'Geben sie ihre email ein',
+      placeholder: 'Geben sie ihre email ein',
       errorMessageEmpty: 'Sie müssen einen Wert eingeben',
       errorMessageWrong: 'Die ist keine gültige Adresse'
     }
