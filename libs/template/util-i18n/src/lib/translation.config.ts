@@ -48,7 +48,7 @@ export const txDemoDataDE = {
       placeholder: 'Geben sie eine Zahl ein'
     },
     emailInput: {
-      text: 'Dies ist ein Eingabefeld mit Validierung, eine Fehlermeldung erschein nach der Eingab einer ungültigen Adresse',
+      text: 'Dies ist ein Eingabefeld mit Validierung, eine Fehlermeldung erscheint nach der Eingab einer ungültigen Adresse',
       placeholder: 'Geben sie ihre email ein',
       errorMessageEmpty: 'Sie müssen einen Wert eingeben',
       errorMessageWrong: 'Die ist keine gültige Adresse'
