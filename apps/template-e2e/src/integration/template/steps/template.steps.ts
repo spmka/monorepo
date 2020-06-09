@@ -10,8 +10,8 @@ const buttonIds = LocaleSwitchFormIds.localeSwitch.buttons;
 
 /** The mapping of ui elements names used in the scenario to their ids */
 const nameMapping: ElementNameToIdMapping = new Map([
-  ['Number', formIds.input],
-  ['EMail', formIds.email],
+  ['Number', formIds.numberInput],
+  ['EMail', formIds.emailInput],
   ['German', buttonIds.german],
   ['English', buttonIds.english]
 ]);
